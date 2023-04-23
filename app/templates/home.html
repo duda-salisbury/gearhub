@@ -1,1 +1,13 @@
-<h1>Sup nereds</h1>
+<h1> This is your organization's home page </h1>
+<p> This is where you can put information about your organization. </p>
+
+<h1>All Items</h1>
+<nav>
+    <a href="/new">Add New Item</a>
+</nav>
+<ul>
+  {% for item in items %}
+    <li><a href="/item/{{ item.id }}">{{ item.name }}</a></li>
+  {% endfor %}
+</ul>
+

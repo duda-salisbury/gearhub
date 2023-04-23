@@ -1,5 +1,4 @@
 <?php 
-
 class Item
 {
     private $id;
@@ -34,7 +33,7 @@ class Item
     public static function findById($id)
     {
         // TODO: Retrieve an item by its ID from the database
-        $db = new SQLite3('../gearhub.db');
+        $db = new SQLite3('gearhub.db');
         $results = $db->query("SELECT * FROM items WHERE id = $id");
         $item = $results->fetchArray();
         $db->close();
@@ -46,7 +45,7 @@ class Item
     public static function findAll()
     {
         // TODO: Retrieve all items from the database
-        $db = new SQLite3('../gearhub.db');
+        $db = new SQLite3('gearhub.db');
         $results = $db->query("SELECT * FROM items");
         // check for sqlite error
         if (!$results) {
@@ -64,7 +63,7 @@ class Item
     {
         // TODO: Save the item to the database (INSERT if new, UPDATE if existing)
 
-        $db = new SQLite3('../gearhub.db');
+        $db = new SQLite3('gearhub.db');
 
         if ($this->id) {
             $db->exec("UPDATE items SET name = '$this->name', description = '$this->description', category = '$this->category', condition = '$this->condition', location = '$this->location', quantity = '$this->quantity', available = '$this->available', max_checkout = '$this->max_checkout', image_url = '$this->image_url', updated_at = '$this->updated_at' WHERE id = $this->id");
@@ -90,7 +89,7 @@ class Item
     {
         // TODO: Delete the item from the database and return true or false on success or fail
 
-        $db = new SQLite3('../gearhub.db');
+        $db = new SQLite3('gearhub.db');
         $db->exec("DELETE FROM items WHERE id = $this->id");
 
         $changes = $db->changes();

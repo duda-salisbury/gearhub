@@ -1,0 +1,35 @@
+<!--
+
+    public $name;
+    public $description;
+    private $category;
+    private $condition;
+    private $location;
+    private $quantity;
+    private $available;
+    private $max_checkout;
+    private $image_url;
+    private $created_at;
+    private $updated_at;
+
+-->
+
+<div class="item">
+    <h1>{{item.name}}</h1>
+    <p>{{item.description}}</p>
+    <p>Location: {{item.getProp('location')}}</p>
+    <p>Quantity: {{item.getProp('quantity')}}</p>
+    <p>Available: {{item.getProp('available')}}</p>
+    <p>Max Checkout: {{item.getProp('max_checkout')}}</p>
+    <p>Image URL: {{item.getProp('image_url')}}</p>
+    <p>Created At: {{item.getProp('created_at')}}</p>
+    <p>Updated At: {{item.getProp('updated_at')}}</p>
+    <p>Category: {{item.getProp('category')}}</p>
+    <p>Condition: {{item.getProp('condition')}}</p>
+    
+    <a href="/item/{{item.id}}/checkout">Checkout</a>
+    <div class="item-actions">
+        <a href="/item/{{item.id}}/edit">Edit</a>
+        <a href="/item/{{item.id}}/delete">Delete</a>
+    </div>
+</div>
