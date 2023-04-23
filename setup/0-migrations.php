@@ -1,7 +1,7 @@
 <?php
 
 // Open the database
-$db = new SQLite3('../gearhub.db');
+$db = new SQLite3('../app/gearhub.db');
 
 // Create the items table
 $db->exec('CREATE TABLE items (

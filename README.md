@@ -11,13 +11,17 @@ GearHub is a web application that allows organizations to manage their gear clos
 
 ## Technologies Used
 
-- PHP for the server-side code
+- PHP/Slim4 Framework
 - SQLite for the database
 - HTML, CSS, and JavaScript for the front-end interface
 - HTMX for interactivity
 
 ## Dependencies
-- TBD
+- php8
+- Slim4 Framework
+- twig for templates
+- sqlite
+- htmx
 
 ## Installation
 

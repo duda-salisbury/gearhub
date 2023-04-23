@@ -5,7 +5,7 @@ $admin_email = 'joel@dudasalisbury.com';
 
 
 // Connect to the database
-$db = new SQLite3('../gearhub.db');
+$db = new SQLite3('../app/gearhub.db');
 
 // Define the items to seed
 $items = [
