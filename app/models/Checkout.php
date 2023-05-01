@@ -1,5 +1,4 @@
 <?php
-namespace App\Models;
 class Checkout {
     public $id;
     public $user_id;
